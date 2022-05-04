@@ -24,7 +24,7 @@ fs.readFile('./test_data/SQL_data.csv', 'utf8', function (err, data) {
         });
         sqlText += rowText + '),\n';
     });
-    sqlText.replaceAll('24:00:00', '23:59:59');
+    sqlText = sqlText.replaceAll('24:00:00', '23:59:59');
     console.log(sqlText);
 })
 // .then(sqlText => {
